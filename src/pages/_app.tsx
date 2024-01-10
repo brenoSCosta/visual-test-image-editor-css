@@ -1,6 +1,8 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 import GlobalStyles from "../styles/global";
 import theme from "../styles/theme";
 import { ThemeProvider } from "styled-components";
