@@ -3,23 +3,28 @@ import Image from "next/image";
 
 // import theme from "../../styles/theme";
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  background-image: linear-gradient(to right, #18a0be, #622db9);
+  margin: 0;
+`;
 
 export const Img = styled(Image)``;
 
 export const ButtonMenu = styled.button`
-  background-color: transparent;
+  display: inline-block;
+  align-items: center;
+  border: transparent !important;
 `;
 
 export const Icon = styled.i``;
 
 export const Logo = styled(Img)`
   width: 8rem;
-  height: 3rem;
+  height: 4rem;
 `;
 
 export const UserImage = styled(Img)`
-  width: 8rem;
+  width: 3rem;
   height: 3rem;
   border-radius: 2rem;
 `;
