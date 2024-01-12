@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
   }
 
   ${({ theme }) => css`
@@ -44,7 +45,9 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       font-size: ${theme.font.sizes.medium};
-      background-color: ${theme.colors.purple_100};
+      background-color: ${theme.colors.gray_50};
+      height: 100vh;
+      width: 100vw;
     }
 
     body,
@@ -57,6 +60,7 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
+    background-color:initial;
   }
 
   a {
