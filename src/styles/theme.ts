@@ -30,7 +30,7 @@ export default {
     },
   },
   colors: {
-    primary: "#4CAF50",
+    primary: "#FF5722",
     white: "#f7f7f7",
     gray_50: "#e0e0e0",
     gray_300: "#555",
@@ -39,6 +39,10 @@ export default {
     purple_300: "#673AB7",
     red_300: "#E57373",
     black: "#333",
+    orange_200: "#FFA726",
+    orange_300: "#FF9800",
+    orange_400: "#FF7043",
+    orange_600: "#FF5722",
   },
   spacings: {
     xxxsmall: "0.6rem",

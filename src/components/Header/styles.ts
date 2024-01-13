@@ -4,7 +4,12 @@ import Image from "next/image";
 // import theme from "../../styles/theme";
 
 export const Header = styled.header`
-  background-image: linear-gradient(to right, #18a0be, #622db9);
+  background-image: linear-gradient(
+    to right,
+    ${(props) => props.theme.colors.orange_300},
+    ${(props) => props.theme.colors.orange_400}
+  );
+
   margin: 0;
 `;
 
@@ -14,9 +19,16 @@ export const ButtonMenu = styled.button`
   display: inline-block;
   align-items: center;
   border: transparent !important;
-  margin: 0.2rem;
   padding: 2rem;
   color: white;
+  font-size: 2rem;
+  border-radius: 3rem;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.gray_300};
+  }
+  &:nth-of-type(4) {
+    justify-content: end;
+  }
 `;
 
 export const Icon = styled.i``;
@@ -24,6 +36,7 @@ export const Icon = styled.i``;
 export const Logo = styled(Img)`
   width: 5rem;
   height: 3rem;
+  object-fit: cover;
 `;
 
 export const UserImage = styled(Img)`
