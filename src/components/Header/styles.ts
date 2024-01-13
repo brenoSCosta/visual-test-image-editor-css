@@ -4,6 +4,7 @@ import Image from "next/image";
 // import theme from "../../styles/theme";
 
 export const Header = styled.header`
+  display: flex;
   background-image: linear-gradient(
     to right,
     ${(props) => props.theme.colors.orange_300},
@@ -23,11 +24,20 @@ export const ButtonMenu = styled.button`
   color: white;
   font-size: 2rem;
   border-radius: 3rem;
+  transition: background-color 0.3s;
+
   &:hover {
-    background-color: ${(props) => props.theme.colors.gray_300};
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.1);
   }
   &:nth-of-type(4) {
-    justify-content: end;
+    display: flex;
+  }
+  &:last-child {
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -36,13 +46,17 @@ export const Icon = styled.i``;
 export const Logo = styled(Img)`
   width: 5rem;
   height: 3rem;
+  align-self: center;
   object-fit: cover;
+  margin-left: 2rem;
+  margin-right: 3rem;
 `;
 
 export const UserImage = styled(Img)`
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
+  margin-right: 1rem;
 `;
 export const UserSpan = styled.span``;
 
