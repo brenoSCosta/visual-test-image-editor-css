@@ -1,7 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Image from "next/image";
 
-// import theme from "../../styles/theme";
+const fadeInFromTop = keyframes`
+  0%   {
+    transform: translateY(-5rem);
+  }
+
+  100% {
+    transform: translateY(0rem);}
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -10,7 +17,6 @@ export const Header = styled.header`
     ${(props) => props.theme.colors.orange_300},
     ${(props) => props.theme.colors.orange_400}
   );
-
   margin: 0;
 `;
 
@@ -25,6 +31,7 @@ export const ButtonMenu = styled.button`
   font-size: ${(props) => props.theme.font.sizes.small};
   border-radius: 3rem;
   transition: background-color 0.3s;
+  animation: ${fadeInFromTop} 0.5s;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -58,6 +65,7 @@ export const Logo = styled(Img)`
   @media (max-width: 768px) {
     width: 3rem;
   }
+  animation: ${fadeInFromTop} 0.5s;
 `;
 
 export const UserImage = styled(Img)`
