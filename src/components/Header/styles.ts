@@ -22,7 +22,7 @@ export const ButtonMenu = styled.button`
   border: transparent !important;
   padding: 2rem;
   color: white;
-  font-size: 2rem;
+  font-size: ${(props) => props.theme.font.sizes.small};
   border-radius: 3rem;
   transition: background-color 0.3s;
 
@@ -33,11 +33,16 @@ export const ButtonMenu = styled.button`
     background-color: rgba(255, 255, 255, 0.1);
   }
   &:nth-of-type(4) {
-    display: flex;
+    margin-left: auto;
   }
   &:last-child {
     display: flex;
     align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.font.sizes.xxsmall};
+    padding: 1rem;
   }
 `;
 
@@ -50,6 +55,9 @@ export const Logo = styled(Img)`
   object-fit: cover;
   margin-left: 2rem;
   margin-right: 3rem;
+  @media (max-width: 768px) {
+    width: 3rem;
+  }
 `;
 
 export const UserImage = styled(Img)`
