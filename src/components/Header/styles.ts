@@ -26,13 +26,12 @@ export const ButtonMenu = styled.button`
   display: inline-block;
   align-items: center;
   border: transparent !important;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
-  font-size: ${(props) => props.theme.font.sizes.small};
+  font-size: ${(props) => props.theme.font.sizes.xxsmall};
   border-radius: 3rem;
   transition: background-color 0.3s;
   animation: ${fadeInFromTop} 0.5s;
-
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
@@ -48,7 +47,7 @@ export const ButtonMenu = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: ${(props) => props.theme.font.sizes.xxsmall};
+    // font-size: ${(props) => props.theme.font.sizes.xxsmall};
     padding: 1rem;
   }
 `;
