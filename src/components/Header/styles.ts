@@ -7,7 +7,8 @@ const fadeInFromTop = keyframes`
   }
 
   100% {
-    transform: translateY(0rem);}
+    transform: translateY(0rem);
+    }
 `;
 
 export const Header = styled.header`
@@ -28,7 +29,7 @@ export const ButtonMenu = styled.button`
   border: transparent !important;
   padding: 1rem;
   color: white;
-  font-size: ${(props) => props.theme.font.sizes.xxsmall};
+  font-size: ${(props) => props.theme.font.sizes.small};
   border-radius: 3rem;
   transition: background-color 0.3s;
   animation: ${fadeInFromTop} 0.5s;
@@ -72,6 +73,8 @@ export const UserImage = styled(Img)`
   height: 3rem;
   border-radius: 2rem;
   margin-right: 1rem;
+  align-self: center;
+  object-fit: cover;
 `;
 export const UserSpan = styled.span``;
 

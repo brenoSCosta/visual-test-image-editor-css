@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       font-size: ${theme.font.sizes.medium};
-      background-color: ${theme.colors.gray_50};
+      background-color: ${theme.colors.background_project};
       height: 100vh;
       width: 100vw;
     }

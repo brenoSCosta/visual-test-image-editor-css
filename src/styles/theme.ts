@@ -30,6 +30,7 @@ export default {
     },
   },
   colors: {
+    background_project: "#edf1f3",
     primary: "#FF5722",
     white: "#f7f7f7",
     gray_50: "#e0e0e0",
