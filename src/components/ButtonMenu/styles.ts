@@ -40,5 +40,5 @@ export const ButtonMenu = styled.button`
 
 export const Icon = styled.i``;
 export const TextSpan = styled.span`
-  font-size: ${(props) => props.theme.spacings.xsmall};
+  font-size: ${(props) => props.theme.font.sizes.xxsmall};
 `;

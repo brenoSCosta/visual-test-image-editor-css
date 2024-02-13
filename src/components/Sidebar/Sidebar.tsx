@@ -9,26 +9,31 @@ const Sidebar = () => {
   }
   return (
     <S.Sidebar>
-      <ButtonMenu
-        text="Clique aquidsds"
-        onClick={() => {
-          handleBtActive(1);
-        }}
-      />
-      <ButtonMenu
-        text="Clique aqui"
-        onClick={() => {
-          handleBtActive(2);
-        }}
-      />{" "}
-      <ButtonMenu
-        text="Clique aqui"
-        onClick={() => {
-          handleBtActive(3);
-        }}
-      />{" "}
-      <ButtonMenu text="Clique aqui" /> <ButtonMenu text="Clique aqui" />
-      <ButtonMenu text="Clique aqui" /> <ButtonMenu text="Clique aqui" />
+      <section>
+        <ButtonMenu
+          text="Clique aquidsds"
+          onClick={() => {
+            handleBtActive(1);
+          }}
+        />
+        <ButtonMenu
+          text="Clique aqui"
+          onClick={() => {
+            handleBtActive(2);
+          }}
+        />{" "}
+        <ButtonMenu
+          text="Clique aqui"
+          onClick={() => {
+            handleBtActive(3);
+          }}
+        />
+      </section>
+      <S.Footer>
+        <S.Copyright>
+          &copy; 2024 Breno Souza Costa. All rights reserved.
+        </S.Copyright>
+      </S.Footer>
     </S.Sidebar>
   );
 };
