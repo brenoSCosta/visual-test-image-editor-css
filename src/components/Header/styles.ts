@@ -53,8 +53,6 @@ export const ButtonMenu = styled.button`
   }
 `;
 
-export const Icon = styled.i``;
-
 export const Logo = styled(Img)`
   width: 5rem;
   height: 3rem;
