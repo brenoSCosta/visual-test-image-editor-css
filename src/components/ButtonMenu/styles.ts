@@ -18,6 +18,7 @@ export const ButtonMenu = styled.button`
   flex-direction: column;
   align-items: center;
   position: relative;
+  height: 10rem;
   width: 100%;
   transition: background-color 0.3s;
   animation: ${fadeInFromLeft} 0.5s;
