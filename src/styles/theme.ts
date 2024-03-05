@@ -33,6 +33,7 @@ export default {
     primary: "#FF5722",
     white: "#f7f7f7",
     gray_50: "#e0e0e0",
+    gray_200: "#CCCCCC",
     gray_300: "#555",
     yellow_300: "#FFD700",
     purple_100: "#9C27B0",
@@ -46,6 +47,7 @@ export default {
     background_project: "#EDF1f3",
     side_bar: "#10171A",
     side_painel: "#2B363C",
+    side_button: "#333e44",
   },
   spacings: {
     xxxsmall: "0.6rem",

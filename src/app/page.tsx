@@ -10,7 +10,7 @@ export default function Home() {
     <AppContainer>
       <>
         <Sidebar></Sidebar>
-        <SidePanel title="Imagens" />
+        <SidePanel title="Images" />
         <MainContent></MainContent>
       </>
     </AppContainer>
