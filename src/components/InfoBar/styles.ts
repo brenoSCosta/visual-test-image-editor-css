@@ -6,4 +6,4 @@ export const BreadCrumbs = styled.div``;
 
 export const BreadCrumbsLink = styled.a``;
 export const BreadCrumbsIcon = styled.i``;
-export const BreadCrumbsText = styled.i``;
+export const BreadCrumbsText = styled.span``;
