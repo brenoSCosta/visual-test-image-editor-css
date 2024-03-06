@@ -1,15 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Image from "next/image";
-
-const fadeInFromTop = keyframes`
-  0%   {
-    transform: translateY(-5rem);
-  }
-
-  100% {
-    transform: translateY(0rem);
-    }
-`;
+import { fadeInFromTop } from "@/styles/animations/animations";
 
 export const Header = styled.header`
   display: flex;

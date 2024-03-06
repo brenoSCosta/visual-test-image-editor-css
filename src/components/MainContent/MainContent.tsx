@@ -1,6 +1,8 @@
 import * as S from "./styles";
-
-const MainContent = () => {
-  return <S.MainContent></S.MainContent>;
+interface MainContentProps {
+  children: React.ReactNode;
+}
+const MainContent = ({ children }: MainContentProps) => {
+  return <S.MainContent>{children}</S.MainContent>;
 };
 export default MainContent;

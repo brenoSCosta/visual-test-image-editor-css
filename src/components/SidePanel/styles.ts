@@ -1,22 +1,5 @@
-import styled, { keyframes } from "styled-components";
-const scale = keyframes`
-  0%   {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.2);
-    }
-`;
-const fadeIn = keyframes`
-  0%   {
-    opacity:0;
-  }
-
-  100% {
-    opacity:1;
-    }
-`;
+import { fadeIn, scale } from "@/styles/animations/animations";
+import styled from "styled-components";
 
 export const SidePanel = styled.div`
   background-color: ${(props) => props.theme.colors.side_painel};
@@ -52,9 +35,7 @@ export const PanelImgs = styled.img`
   border-radius: 0.7rem;
   object-fit: cover;
   animation: ${fadeIn} 1s;
-  &:hover {
-    animation: ${scale} 1s ease forwards;
-  }
+
   &:nth-of-type(2) {
     animation: ${fadeIn} 1s 0.1s backwards;
   }
@@ -66,6 +47,9 @@ export const PanelImgs = styled.img`
   }
   &:nth-of-type(5) {
     animation: ${fadeIn} 1s 0.4s backwards;
+  }
+  &:hover {
+    animation: ${scale} 1s ease forwards;
   }
 `;
 export const PanelBtnAdd = styled.button`

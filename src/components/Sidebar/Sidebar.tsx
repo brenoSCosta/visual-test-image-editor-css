@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ButtonMenu } from "../ButtonMenu";
 import * as S from "./styles";
+import { faA, faFolderOpen, faImages } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   const [buttonActive, setButtonActive] = useState(0);
@@ -11,22 +12,28 @@ const Sidebar = () => {
     <S.Sidebar>
       <section>
         <ButtonMenu
-          text="Clique aquidsds"
+          text="Templates"
           onClick={() => {
             handleBtActive(1);
           }}
+          active={buttonActive === 1}
+          icon={faFolderOpen}
         />
         <ButtonMenu
-          text="Clique aqui"
+          text="Images"
           onClick={() => {
             handleBtActive(2);
           }}
-        />{" "}
+          active={buttonActive === 2}
+          icon={faImages}
+        />
         <ButtonMenu
-          text="Clique aqui"
+          text="Text/Font"
           onClick={() => {
             handleBtActive(3);
           }}
+          active={buttonActive === 3}
+          icon={faA}
         />
       </section>
       <S.Footer>

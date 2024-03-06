@@ -1,5 +1,6 @@
 "use client";
 import { AppContainer } from "@/components/AppContainer";
+import { InfoBar } from "@/components/InfoBar";
 import { MainContent } from "@/components/MainContent";
 import { SidePanel } from "@/components/SidePanel";
 import { Sidebar } from "@/components/Sidebar";
@@ -11,7 +12,9 @@ export default function Home() {
       <>
         <Sidebar></Sidebar>
         <SidePanel title="Images" />
-        <MainContent></MainContent>
+        <MainContent>
+          <InfoBar />
+        </MainContent>
       </>
     </AppContainer>
   );

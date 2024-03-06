@@ -1,18 +1,22 @@
 import { ButtonHTMLAttributes } from "react";
 import * as S from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 interface ButtonMenuProps {
   text: string;
+  active: boolean;
+  icon: IconDefinition;
 }
 const ButtonMenu = ({
-  text,
+  text = "",
+  active = false,
+  icon,
   ...props
 }: ButtonMenuProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <S.ButtonMenu {...props}>
-      <S.Icon>
-        <FontAwesomeIcon icon={faBell} />
+    <S.ButtonMenu active={active} {...props}>
+      <S.Icon active={active}>
+        <FontAwesomeIcon icon={icon} />
       </S.Icon>
       <S.TextSpan> {text}</S.TextSpan>
     </S.ButtonMenu>
