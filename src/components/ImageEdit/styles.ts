@@ -1,3 +1,8 @@
+import {
+  fadeIn,
+  fadeInFromRight,
+  makeSmaller,
+} from "@/styles/animations/animations";
 import styled from "styled-components";
 
 export const ArtBoard = styled.div`
@@ -23,7 +28,7 @@ export const CanvasImgBg = styled.img`
   opacity: 0.15;
 `;
 export const CanvasImg = styled.img`
-  height: 300px;
+  height: 75%;
   width: 78%;
   object-fit: cover;
   border-radius: 0.3rem;
@@ -32,6 +37,8 @@ export const CanvasImg = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: grab;
+  animation: ${makeSmaller} 1s 0.2s;
+
   border: 0.1rem solid ${(props) => props.theme.colors.white};
 `;
 
@@ -41,6 +48,7 @@ export const CanvasCircle = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
+  animation: ${fadeIn} 1s 1s backwards;
   &:nth-of-type(1) {
     top: 11.5%;
     left: 10.4%;
@@ -68,7 +76,8 @@ export const Tools = styled.section`
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
-  transition: 0.4s;
+  transition: all 0.4s;
+  animation: ${fadeInFromRight} 0.5s;
 `;
 
 export const ButtonTools = styled.button<{ active?: boolean }>`
