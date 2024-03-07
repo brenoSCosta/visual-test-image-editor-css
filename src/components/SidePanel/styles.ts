@@ -58,7 +58,6 @@ export const PanelBtnAdd = styled.button`
   border-radius: 0.7rem;
   background-color: ${(props) => props.theme.colors.side_button};
   border: none;
-  cursor: pointer;
   animation: ${fadeIn} 1s 0.5s backwards;
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);

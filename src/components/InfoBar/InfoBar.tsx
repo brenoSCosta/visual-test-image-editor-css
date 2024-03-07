@@ -13,6 +13,7 @@ const InfoBar = () => {
         </S.BreadCrumbsIcon>
         <S.BreadCrumbsText>My new profile picture</S.BreadCrumbsText>
       </S.BreadCrumbs>
+      <S.InfoBarButton>Publish</S.InfoBarButton>
     </S.InfoBar>
   );
 };
