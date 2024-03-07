@@ -68,9 +68,10 @@ export const Tools = styled.section`
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+  transition: 0.4s;
 `;
 
-export const ButtonTools = styled.button`
+export const ButtonTools = styled.button<{ active?: boolean }>`
   background-color: ${(props) => props.theme.colors.gray_blue};
   cursor: pointer;
   height: 4.4rem;
@@ -78,7 +79,21 @@ export const ButtonTools = styled.button`
   border-radius: 8px;
   color: ${(props) => props.theme.colors.gray_300};
   border: none;
+
   &:last-child {
     margin-top: auto;
   }
+  &:hover,
+  :focus {
+    background-color: ${(props) => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.white};
+  }
+
+  ${(props) =>
+    props.active &&
+    `
+    background-color: ${props.theme.colors.black};
+    color: ${props.theme.colors.white};
+
+  `}
 `;

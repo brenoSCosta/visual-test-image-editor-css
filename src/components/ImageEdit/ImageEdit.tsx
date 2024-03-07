@@ -6,8 +6,13 @@ import {
   faPen,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export const ImageEdit = () => {
+  const [buttonActive, setButtonActive] = useState(0);
+  function handleBtActive(value: number) {
+    setButtonActive(value);
+  }
   return (
     <S.ArtBoard>
       <S.Canvas>
@@ -26,16 +31,36 @@ export const ImageEdit = () => {
       </S.Canvas>
 
       <S.Tools>
-        <S.ButtonTools>
+        <S.ButtonTools
+          onClick={() => {
+            handleBtActive(1);
+          }}
+          active={buttonActive === 1}
+        >
           <FontAwesomeIcon icon={faCrop} />
         </S.ButtonTools>
-        <S.ButtonTools>
+        <S.ButtonTools
+          onClick={() => {
+            handleBtActive(2);
+          }}
+          active={buttonActive === 2}
+        >
           <FontAwesomeIcon icon={faObjectGroup} />
         </S.ButtonTools>
-        <S.ButtonTools>
+        <S.ButtonTools
+          onClick={() => {
+            handleBtActive(3);
+          }}
+          active={buttonActive === 3}
+        >
           <FontAwesomeIcon icon={faPen} />
         </S.ButtonTools>
-        <S.ButtonTools>
+        <S.ButtonTools
+          onClick={() => {
+            handleBtActive(4);
+          }}
+          active={buttonActive === 4}
+        >
           <FontAwesomeIcon icon={faTrash} />
         </S.ButtonTools>
       </S.Tools>
