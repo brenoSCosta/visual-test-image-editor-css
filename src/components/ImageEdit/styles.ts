@@ -5,6 +5,7 @@ export const ArtBoard = styled.div`
   margin-top: 4rem;
   justify-content: center;
   align-items: center;
+  column-gap: 2rem;
 `;
 
 export const Canvas = styled.section`
@@ -66,7 +67,7 @@ export const Tools = styled.section`
   height: 57.5vh;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 0.5rem;
 `;
 
 export const ButtonTools = styled.button`
@@ -75,5 +76,9 @@ export const ButtonTools = styled.button`
   height: 4.4rem;
   width: 4.4rem;
   border-radius: 8px;
+  color: ${(props) => props.theme.colors.gray_300};
   border: none;
+  &:last-child {
+    margin-top: auto;
+  }
 `;
