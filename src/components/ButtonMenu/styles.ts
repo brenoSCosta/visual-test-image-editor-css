@@ -19,6 +19,7 @@ export const ButtonMenu = styled.button<{ active?: boolean }>`
   &:focus {
     background-color: rgba(255, 255, 255, 0.1);
   }
+
   ${(props) =>
     props.active &&
     `
