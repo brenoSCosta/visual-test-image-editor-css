@@ -1,3 +1,4 @@
+import { device } from "@/constants/constants";
 import styled from "styled-components";
 
 export const Sidebar = styled.div`
@@ -6,6 +7,9 @@ export const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const Footer = styled.div`

@@ -43,6 +43,17 @@ export const ButtonMenu = styled.button`
     padding: 1rem;
     font-size: ${(props) => props.theme.font.sizes.xxsmall};
   }
+  @media ${device.mobileL} {
+    &:nth-of-type(1) {
+      display: none;
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+    &:nth-of-type(3) {
+      display: none;
+    }
+  }
 `;
 
 export const Logo = styled(Img)`

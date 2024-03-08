@@ -17,6 +17,9 @@ export const ArtBoard = styled.div`
     margin-top: 1rem;
     height: initial;
   }
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const Canvas = styled.section`
@@ -25,9 +28,15 @@ export const Canvas = styled.section`
   position: relative;
   border: 0.1rem solid ${(props) => props.theme.colors.white};
   border-radius: 0.3rem;
+
   @media ${device.laptop} {
     width: 67vw;
+
     height: 50rem;
+  }
+  @media ${device.tablet} {
+    order: 2;
+    width: 90vw;
   }
 `;
 
@@ -91,6 +100,13 @@ export const Tools = styled.section`
   @media ${device.laptop} {
     height: 50rem;
   }
+  @media ${device.tablet} {
+    flex-direction: row;
+    column-gap: 0.5rem;
+    height: initial;
+    padding-bottom: 1rem;
+    order: 1;
+  }
 `;
 
 export const ButtonTools = styled.button<{ active?: boolean }>`
@@ -118,4 +134,9 @@ export const ButtonTools = styled.button<{ active?: boolean }>`
     color: ${props.theme.colors.white};
 
   `}
+  @media ${device.tablet} {
+    &:last-child {
+      margin-top: 0;
+    }
+  }
 `;

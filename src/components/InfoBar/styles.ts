@@ -24,10 +24,16 @@ export const BreadCrumbs = styled.div``;
 
 export const BreadCrumbsLink = styled.a`
   color: ${(props) => props.theme.colors.gray_200};
+  @media ${device.mobileL} {
+    display: none;
+  }
 `;
 export const BreadCrumbsIcon = styled.i`
   color: ${(props) => props.theme.colors.gray_200};
   margin: 0 1.3rem;
+  @media ${device.mobileL} {
+    display: none;
+  }
 `;
 export const BreadCrumbsText = styled.span`
   font-weight: 500;
