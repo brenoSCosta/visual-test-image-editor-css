@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { fadeInFromTop } from "@/styles/animations/animations";
+import { device } from "@/constants/constants";
 
 export const Header = styled.header`
   display: flex;
@@ -38,9 +39,9 @@ export const ButtonMenu = styled.button`
     align-items: center;
   }
 
-  @media (max-width: 768px) {
-    // font-size: ${(props) => props.theme.font.sizes.xxsmall};
+  @media ${device.laptop} {
     padding: 1rem;
+    font-size: ${(props) => props.theme.font.sizes.xxsmall};
   }
 `;
 

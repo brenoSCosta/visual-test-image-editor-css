@@ -1,3 +1,4 @@
+import { device } from "@/constants/constants";
 import { fadeIn, scale } from "@/styles/animations/animations";
 import styled from "styled-components";
 
@@ -5,6 +6,9 @@ export const SidePanel = styled.div`
   background-color: ${(props) => props.theme.colors.side_painel};
   width: 35rem;
   padding: 1.5rem 3.1rem;
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 export const PanelTop = styled.div`
   background-color: ${(props) => props.theme.colors.side_painel};

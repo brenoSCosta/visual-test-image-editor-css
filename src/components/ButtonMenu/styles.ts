@@ -1,3 +1,4 @@
+import { device } from "@/constants/constants";
 import { fadeInFromLeft } from "@/styles/animations/animations";
 import styled from "styled-components";
 

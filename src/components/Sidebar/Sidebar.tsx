@@ -5,36 +5,37 @@ import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import FontDownloadIcon from "@mui/icons-material/FontDownload";
 
-const Sidebar = () => {
-  const [buttonActive, setButtonActive] = useState(0);
-  function handleBtActive(value: number) {
-    setButtonActive(value);
-  }
+interface SidebarProps {
+  selectValue: number;
+  changeSelectedValue: (newValue: number) => void;
+}
+
+const Sidebar = ({ selectValue = 0, changeSelectedValue }: SidebarProps) => {
   return (
     <S.Sidebar>
       <section>
         <ButtonMenu
           text="Templates"
           onClick={() => {
-            handleBtActive(1);
+            changeSelectedValue(1);
           }}
-          active={buttonActive === 1}
+          active={selectValue === 1}
           icon={FolderOpenIcon}
         />
         <ButtonMenu
           text="Images"
           onClick={() => {
-            handleBtActive(2);
+            changeSelectedValue(2);
           }}
-          active={buttonActive === 2}
+          active={selectValue === 2}
           icon={ImageSearchIcon}
         />
         <ButtonMenu
           text="Text/Font"
           onClick={() => {
-            handleBtActive(3);
+            changeSelectedValue(3);
           }}
-          active={buttonActive === 3}
+          active={selectValue === 3}
           icon={FontDownloadIcon}
         />
       </section>

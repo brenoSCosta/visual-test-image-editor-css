@@ -5,14 +5,22 @@ import { InfoBar } from "@/components/InfoBar";
 import { MainContent } from "@/components/MainContent";
 import { SidePanel } from "@/components/SidePanel";
 import { Sidebar } from "@/components/Sidebar";
-import styled from "styled-components";
+import { device } from "@/constants/constants";
+import { useState } from "react";
 
 export default function Home() {
+  const [buttonActive, setButtonActive] = useState(0);
+  function handleBtActive(value: number) {
+    setButtonActive(value);
+  }
   return (
     <AppContainer>
       <>
-        <Sidebar></Sidebar>
-        <SidePanel title="Images" />
+        <Sidebar
+          changeSelectedValue={handleBtActive}
+          selectValue={buttonActive}
+        />
+        <SidePanel title="Images" activeValue={buttonActive} />
 
         <MainContent>
           <InfoBar />

@@ -1,3 +1,4 @@
+import { device } from "@/constants/constants";
 import styled from "styled-components";
 
 export const InfoBar = styled.div`
@@ -14,6 +15,9 @@ export const InfoBar = styled.div`
   padding-right: 2rem;
   height: auto;
   min-height: 5rem;
+  @media ${device.laptop} {
+    padding: 0 2rem;
+  }
 `;
 
 export const BreadCrumbs = styled.div``;

@@ -1,3 +1,4 @@
+import { device } from "@/constants/constants";
 import {
   fadeIn,
   fadeInFromRight,
@@ -11,6 +12,11 @@ export const ArtBoard = styled.div`
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
+  @media ${device.laptop} {
+    padding: 5rem 2rem;
+    margin-top: 1rem;
+    height: initial;
+  }
 `;
 
 export const Canvas = styled.section`
@@ -19,6 +25,10 @@ export const Canvas = styled.section`
   position: relative;
   border: 0.1rem solid ${(props) => props.theme.colors.white};
   border-radius: 0.3rem;
+  @media ${device.laptop} {
+    width: 67vw;
+    height: 50rem;
+  }
 `;
 
 export const CanvasImgBg = styled.img`
@@ -78,6 +88,9 @@ export const Tools = styled.section`
   row-gap: 0.5rem;
   transition: all 0.4s;
   animation: ${fadeInFromRight} 0.5s;
+  @media ${device.laptop} {
+    height: 50rem;
+  }
 `;
 
 export const ButtonTools = styled.button<{ active?: boolean }>`
