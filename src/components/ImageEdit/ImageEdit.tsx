@@ -1,12 +1,10 @@
 import * as S from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCrop,
-  faObjectGroup,
-  faPen,
-  faTrash,
-} from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
+import CropIcon from "@mui/icons-material/Crop";
+import ImageAspectRatioIcon from "@mui/icons-material/ImageAspectRatio";
+import CreateIcon from "@mui/icons-material/Create";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 export const ImageEdit = () => {
   const [buttonActive, setButtonActive] = useState(0);
@@ -37,7 +35,7 @@ export const ImageEdit = () => {
           }}
           active={buttonActive === 1}
         >
-          <FontAwesomeIcon icon={faCrop} />
+          <CropIcon />
         </S.ButtonTools>
         <S.ButtonTools
           onClick={() => {
@@ -45,7 +43,7 @@ export const ImageEdit = () => {
           }}
           active={buttonActive === 2}
         >
-          <FontAwesomeIcon icon={faObjectGroup} />
+          <ImageAspectRatioIcon />
         </S.ButtonTools>
         <S.ButtonTools
           onClick={() => {
@@ -53,7 +51,7 @@ export const ImageEdit = () => {
           }}
           active={buttonActive === 3}
         >
-          <FontAwesomeIcon icon={faPen} />
+          <CreateIcon />
         </S.ButtonTools>
         <S.ButtonTools
           onClick={() => {
@@ -61,7 +59,7 @@ export const ImageEdit = () => {
           }}
           active={buttonActive === 4}
         >
-          <FontAwesomeIcon icon={faTrash} />
+          <DeleteIcon />
         </S.ButtonTools>
       </S.Tools>
     </S.ArtBoard>

@@ -2,12 +2,8 @@
 import * as S from "./styles";
 import logo from "../../assets/images/logo.png";
 import user_img from "../../assets/images/user_img.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCrown, faBell } from "@fortawesome/free-solid-svg-icons";
-
-// type MainProps = {
-//   children: React.ReactNode;
-// };
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 
 const Header = () => (
   <S.Header>
@@ -16,10 +12,10 @@ const Header = () => (
     <S.ButtonMenu>View</S.ButtonMenu>
     <S.ButtonMenu>New</S.ButtonMenu>
     <S.ButtonMenu>
-      <FontAwesomeIcon icon={faBell} />
+      <NotificationsIcon fontSize="large" />
     </S.ButtonMenu>
     <S.ButtonMenu>
-      <FontAwesomeIcon icon={faCrown} />
+      <PersonSearchIcon fontSize="large" />
     </S.ButtonMenu>
     <S.ButtonMenu>
       <S.UserImage src={user_img} alt="logo_user" />

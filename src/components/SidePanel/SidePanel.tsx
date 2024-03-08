@@ -1,7 +1,6 @@
-import { ReactNode } from "react";
 import * as S from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faAnglesLeft } from "@fortawesome/free-solid-svg-icons";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import AddIcon from "@mui/icons-material/Add";
 interface ISidePanel {
   title: string;
 }
@@ -11,7 +10,7 @@ const SidePanel = ({ title = "" }: ISidePanel) => {
       <S.PanelTop>
         <S.PanelTopTitle>{title}</S.PanelTopTitle>
         <S.PanelTopIcon>
-          <FontAwesomeIcon icon={faAnglesLeft} width={"100%"} height={"100%"} />
+          <KeyboardDoubleArrowLeftIcon fontSize="inherit" />
         </S.PanelTopIcon>
       </S.PanelTop>
       <S.PanelImages>
@@ -37,7 +36,7 @@ const SidePanel = ({ title = "" }: ISidePanel) => {
         />
         <S.PanelBtnAdd>
           <S.PanelUploadIcon>
-            <FontAwesomeIcon icon={faPlus} width={"100%"} height={"100%"} />
+            <AddIcon fontSize="large" />
           </S.PanelUploadIcon>
         </S.PanelBtnAdd>
       </S.PanelImages>

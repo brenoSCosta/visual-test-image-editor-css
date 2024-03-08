@@ -1,11 +1,12 @@
-import { ButtonHTMLAttributes } from "react";
 import * as S from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { IconType } from "react-icons";
+import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { SvgIconTypeMap } from "@mui/material/SvgIcon";
+
 interface ButtonMenuProps {
   text: string;
   active: boolean;
-  icon: IconDefinition;
+  icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string }; // Defina o tipo correto do ícone do Material-UI
 }
 const ButtonMenu = ({
   text = "",
@@ -13,10 +14,12 @@ const ButtonMenu = ({
   icon,
   ...props
 }: ButtonMenuProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+  const Icon = icon;
+
   return (
     <S.ButtonMenu active={active} {...props}>
       <S.Icon active={active}>
-        <FontAwesomeIcon icon={icon} />
+        <Icon fontSize="large" />
       </S.Icon>
       <S.TextSpan> {text}</S.TextSpan>
     </S.ButtonMenu>

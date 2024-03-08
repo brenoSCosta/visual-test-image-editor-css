@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { ButtonMenu } from "../ButtonMenu";
 import * as S from "./styles";
-import { faA, faFolderOpen, faImages } from "@fortawesome/free-solid-svg-icons";
+import FolderOpenIcon from "@mui/icons-material/FolderOpen";
+import ImageSearchIcon from "@mui/icons-material/ImageSearch";
+import FontDownloadIcon from "@mui/icons-material/FontDownload";
 
 const Sidebar = () => {
   const [buttonActive, setButtonActive] = useState(0);
@@ -17,7 +19,7 @@ const Sidebar = () => {
             handleBtActive(1);
           }}
           active={buttonActive === 1}
-          icon={faFolderOpen}
+          icon={FolderOpenIcon}
         />
         <ButtonMenu
           text="Images"
@@ -25,7 +27,7 @@ const Sidebar = () => {
             handleBtActive(2);
           }}
           active={buttonActive === 2}
-          icon={faImages}
+          icon={ImageSearchIcon}
         />
         <ButtonMenu
           text="Text/Font"
@@ -33,7 +35,7 @@ const Sidebar = () => {
             handleBtActive(3);
           }}
           active={buttonActive === 3}
-          icon={faA}
+          icon={FontDownloadIcon}
         />
       </section>
       <S.Footer>
