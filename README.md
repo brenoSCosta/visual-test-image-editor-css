@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Treinamento de CSS com Next.js
 
-## Getting Started
+Este é um projeto de treinamento focado no aprimoramento das habilidades em CSS usando Next.js como base.
 
-First, run the development server:
+## Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto tem como objetivo praticar técnicas avançadas de CSS em conjunto com Next.js, um framework React para renderização do lado do servidor.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Utilizar o Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone o Repositório:**
+   ```
+   git clone https://github.com/brenoSCosta/visual-test-image-editor-css.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Instale as Dependências:**
+   ```
+   cd visual-test-image-editor-css
+   npm install
+   ```
 
-## Learn More
+3. **Execute o Projeto:**
+   ```
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Acesse a Aplicação:**
+   Abra o navegador e acesse `http://localhost:3000` para visualizar o resultado do treinamento em CSS com Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Autor
 
-## Deploy on Vercel
+Este projeto é mantido por [Breno S. Costa](https://github.com/brenoSCosta).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
