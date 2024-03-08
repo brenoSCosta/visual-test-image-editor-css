@@ -23,7 +23,7 @@ export const ButtonMenu = styled.button`
   font-size: ${(props) => props.theme.font.sizes.small};
   border-radius: 3rem;
   transition: background-color 0.3s;
-  animation: ${fadeInFromTop} 0.5s;
+  animation: ${fadeInFromTop} 1.5s;
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
